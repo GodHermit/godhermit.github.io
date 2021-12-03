@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hi! My name is Oleh.">
+    <title>GodHermit</title>
+    <!-- OG tags -->
+    <meta property="og:image" content="img/android-chrome-512x512.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round&amp;display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+</head>
+
+<body>
+    <main class="main">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-body active" data-card-page="1">
+                    <div class="card-avatar">
+                        <img src="img/avatar.jpg" class="card-avatar--image" alt="">
+                    </div>
+                    <h1 class="card-headline">Oleh Proidakov</h1>
+                    <h2 class="card-subheadline">@GodHermit</h2>
+                    <div class="card-description">🌹</div>
+                    <table class="card-table">
+                        <tr>
+                            <td><b>Age:&nbsp;</b></td>
+                            <td><span id="age"></span></td>
+                        </tr>
+                        <tr>
+                            <td><b>Email:&nbsp;</b></td>
+                            <td><a href="mailto: first.god.hermit@gmail.com" class="link" target="_blank"
+                                    rel="nofollow">first.god.hermit@gmail.com</a></td>
+                        </tr>
+                        <tr>
+                            <td><b>Telegram:&nbsp;</b></td>
+                            <td><a href="https://t.me/GodHermit" class="link" target="_blank"
+                                    rel="nofollow">@GodHermit</a></td>
+                        </tr>
+                        <tr>
+                            <td><b>GitHub:&nbsp;</b></td>
+                            <td><a href="https://github.com/GodHermit" class="link" target="_blank"
+                                    rel="nofollow">@GodHermit</a></td>
+                        </tr>
+                    </table>
+                    <div class="card-tools">
+                        <button class="btn-link card-tools--next">Next</button>
+                    </div>
+                </div>
+                <div class="card-body" data-card-page="2">
+                    <h1 class="card-headline">My project's</h1>
+                    <div class="card-tools">
+                        <button class="btn-link card-tools--prev">Back</button>
+                    </div>
+                    <ul class="card-list">
+                        <li class="card-list__item">
+                            <!-- <a href="" class="link"></a> -->
+                            <span>Haha! I am only student.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; <span id="current-year"></span>, GodHermit</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            $('#age').text(Math.abs(new Date(Date.now() - new Date("6 Nov 2003").getTime()).getUTCFullYear() - 1970));
+            $('#current-year').text(new Date().getUTCFullYear());
+
+            $('body').on('click', '.card-tools--prev', function () {
+                let active_page = $('.card-body.active').data('card-page') || 1;
+                $('.card-content').width($('.card-body[data-card-page="' + active_page + '"]').width());
+                $('.card-content').height($('.card-body[data-card-page="' + active_page + '"]').height());
+                $('.card-body[data-card-page="' + active_page + '"]').removeClass('active');
+                $('.card-body[data-card-page="' + (active_page - 1) + '"]').addClass('active');
+            });
+
+            $('body').on('click', '.card-tools--next', function () {
+                let active_page = $('.card-body.active').data('card-page') || 1;
+                $('.card-content').width($('.card-body[data-card-page="' + active_page + '"]').width());
+                $('.card-content').height($('.card-body[data-card-page="' + active_page + '"]').height());
+                $('.card-body[data-card-page="' + active_page + '"]').removeClass('active');
+                $('.card-body[data-card-page="' + (active_page + 1) + '"]').addClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
