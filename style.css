@@ -1,3 +1,21 @@
+:root {
+    --color-text-primary: #212121;
+    --color-text-secondary: #757575;
+    --color-background: #ffffff;
+    --color-background-translucent: rgba(33, 33, 33, 0.08);
+    --color-border: #e0e0e0;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-text-primary: #e0e0e0;
+        --color-text-secondary: #929292;
+        --color-background: #121212;
+        --color-background-translucent: rgba(242, 242, 242, 0.08);
+        --color-border: #2e2e2e;
+    }
+}
+
 *,
 *::before,
 *::after {
@@ -16,34 +34,14 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-:root {
-    --primary-color: #000;
-    --secondary-color: grey;
-    --background: #fff;
-    --secondary-background: #d5d5d5;
-    --border: none;
-    --shadow: 0 0 1rem rgba(0, 0, 0, .2);
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --primary-color: #fff;
-        --secondary-color: grey;
-        --background: #222;
-        --secondary-background: #2f2f2f;
-        --border: 1px solid grey;
-        --shadow: none;
-    }
-}
-
 body {
     min-height: 100vh;
     font-family: 'Raleway', sans-serif;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased !important;
     overflow: overlay;
-    background: var(--background);
-    color: var(--primary-color);
+    background: var(--color-background);
+    color: var(--color-text-primary);
 }
 
 ::-webkit-scrollbar {
@@ -91,10 +89,9 @@ body {
     position: relative;
     display: flex;
     padding: 2rem;
-    background: var(--background);
-    border: var(--border);
+    background: var(--color-background);
+    border: 2px dashed var(--color-border);
     border-radius: 10px;
-    box-shadow: var(--shadow);
 }
 
 .card-body {
@@ -109,6 +106,7 @@ body {
 }
 
 .card-avatar {
+    position: relative;
     display: flex;
     justify-content: center;
     margin-bottom: 1.5rem;
@@ -128,13 +126,13 @@ body {
     margin-bottom: 1rem;
     font-weight: normal;
     font-size: 18px;
-    color: var(--secondary-color);
+    color: var(--color-text-secondary);
 }
 
 .card-description {
     margin-bottom: 1rem;
     font-size: 14px;
-    color: var(--secondary-color);
+    color: var(--color-text-secondary);
 }
 
 .card-table {
@@ -143,12 +141,12 @@ body {
 }
 
 .card-table tr td:last-child {
-    color: var(--secondary-color);
+    color: var(--color-text-secondary);
     transition: .35s;
 }
 
 .card-table tr td:last-child .link:hover {
-    color: var(--primary-color);
+    color: var(--color-text-primary);
 }
 
 .card-list {
@@ -159,28 +157,11 @@ body {
     margin-bottom: .5rem;
     line-height: 1.5;
     font-size: 18px;
-    color: var(--primary-color);
     transition: .35s;
 }
 
-.card-list__item .link {
-    position: relative;
-}
-
-.card-list__item .link::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-bottom: 1px solid var(--primary-color);
-    transition: .35s;
-}
-
-.card-list__item .link:hover::after {
-    left: 0;
-    width: 100%;
+.card-list__item a {
+    text-decoration: underline;
 }
 
 .card-tools {
@@ -192,6 +173,7 @@ body {
 .card-tools--next {
     position: relative;
     display: flex;
+    justify-content: center;
     align-items: center;
     font-weight: bold;
 }
@@ -204,18 +186,17 @@ body {
 .card-tools--next::before {
     content: '';
     position: absolute;
-    bottom: -1px;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-bottom: 1px solid var(--primary-color);
+    width: 100%;
+    height: 100%;
+    padding: .35rem .5rem;
+    border-radius: 10px;
     transition: .35s;
+    box-sizing: content-box;
 }
 
 .card-tools--prev:hover::after,
 .card-tools--next:hover::before {
-    left: 0;
-    width: 100%;
+    background: var(--color-background-translucent);
 }
 
 .card-tools--prev::before,
@@ -244,7 +225,7 @@ body {
     padding: .5rem 1rem;
     text-align: center;
     font-size: 14px;
-    color: var(--secondary-color);
+    color: var(--color-text-secondary);
 }
 
 /* Buttons */
@@ -284,10 +265,10 @@ button[disabled] {
 
     .card-table tr td:first-child {
         font-size: 14px;
-        color: var(--secondary-color);
+        color: var(--color-text-secondary);
     }
-    
-    .card-table tr td:last-child{
-        color: var(--primary-color);
+
+    .card-table tr td:last-child {
+        color: var(--color-text-primary);
     }
 }
