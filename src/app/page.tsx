@@ -10,7 +10,7 @@ export default function HomePage() {
 		<>
 			<Box className={styles.bgImgContainer}>
 				<Image
-					src='bg_wugzxx'
+					src='assets/bg_wugzxx.jpg'
 					alt='Background image'
 					fill
 					quality={90}
