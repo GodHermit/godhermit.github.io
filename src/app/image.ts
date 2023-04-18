@@ -1,6 +1,3 @@
-import { fill } from "@cloudinary/url-gen/actions/resize";
-import { CloudinaryImage } from '@cloudinary/url-gen';
-
 export default function cloudinaryLoader({
 	src,
 	width,
@@ -10,5 +7,8 @@ export default function cloudinaryLoader({
 	width: number;
 	quality?: number;
 }) {
-	return new CloudinaryImage(src, { cloudName: 'dxdbr2wtz' }).resize(fill().width(width)).quality(quality || 'auto').toURL();
+	const params = ['f_auto', 'c_limit', `w_${width}`, `q_${quality || 'auto'}`];
+	return `https://res.cloudinary.com/dxdbr2wtz/image/upload/${params.join(
+		','
+	)}/${src}`;
 }
