@@ -1,6 +1,6 @@
 'use client';
 
-import { Link } from '@chakra-ui/next-js';
+import { Link } from '@chakra-ui/react';
 import { Box, Center, GridItem, Heading, SimpleGrid, Text, Tooltip } from '@chakra-ui/react';
 import Image from 'next/image';
 import styles from './page.module.scss';
@@ -10,7 +10,7 @@ export default function HomePage() {
 		<>
 			<Box className={styles.bgImgContainer}>
 				<Image
-					src='/assets/bg.png'
+					src='bg_wugzxx'
 					alt='Background image'
 					fill
 					quality={90}
