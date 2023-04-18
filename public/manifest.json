@@ -1,12 +1,13 @@
 {
-    "name": "GodHermit",
-    "short_name": "GH",
+    "name": "Oleh Proidakov",
+    "short_name": "Oleh",
+    "start_url": "https://godhermit.github.io/",
     "icons": [{
-        "src": "img/android-chrome-192x192.png",
+        "src": "/assets/android-chrome-192x192.png",
         "sizes": "192x192",
         "type": "image/png"
     }, {
-        "src": "img/android-chrome-512x512.png",
+        "src": "/assets/android-chrome-512x512.png",
         "sizes": "512x512",
         "type": "image/png"
     }],
