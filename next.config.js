@@ -5,9 +5,6 @@ const nextConfig = {
     loader: 'custom',
     loaderFile: './src/app/image.ts',
   },
-  experimental: {
-    appDir: true,
-  },
 }
 
 module.exports = nextConfig

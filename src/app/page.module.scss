@@ -29,8 +29,13 @@
 		min-height: 100svh;
 	}
 
+	& b {
+		filter: blur(10px);
+	}
+
 	&Text {
 		color: lighten($color-dark, 10%);
+		filter: blur(10px);
 
 		& a:hover {
 			color: $color-dark;
