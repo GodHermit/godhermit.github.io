@@ -5,6 +5,6 @@ const nextConfig = {
     loader: 'custom',
     loaderFile: './src/app/image.ts',
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

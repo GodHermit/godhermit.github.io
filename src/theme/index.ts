@@ -11,12 +11,12 @@ import Heading from './components/Heading';
 import Tooltip from './components/Tooltip';
 
 const overrides = {
-	styles,
-	fonts,
-	components: {
-		Heading,
-		Tooltip
-	}
+  styles,
+  fonts,
+  components: {
+    Heading,
+    Tooltip,
+  },
 };
 
-export default extendTheme(overrides)
+export default extendTheme(overrides);
