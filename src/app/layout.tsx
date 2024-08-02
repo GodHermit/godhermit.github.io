@@ -1,5 +1,6 @@
 import { Providers } from './providers';
 import variables from '@/theme/variables.module.scss';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 export const metadata = {
   title: 'Oleh Proidakov',
@@ -43,6 +44,7 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body>
+        <GoogleAnalytics gaId="G-3K2LVX6MD1" />
         <Providers>{children}</Providers>
       </body>
     </html>
