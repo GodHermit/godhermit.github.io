@@ -1,11 +1,13 @@
-import { Providers } from './providers';
-import variables from '@/theme/variables.module.scss';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import './global.css';
+import { Providers } from './providers';
+import { Inter } from 'next/font/google';
+import { clsx } from '@nextui-org/shared-utils';
 
 export const metadata = {
   title: 'Oleh Proidakov',
   description: 'Hi! My name is Oleh.',
-  themeColor: variables.light,
+  themeColor: '#000000',
   icons: {
     icon: [
       {
@@ -35,6 +37,12 @@ export const metadata = {
   },
 };
 
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  fallback: ['sans-serif'],
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -43,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body>
+      <body className={clsx('dark text-foreground bg-background', inter.className)}>
         <GoogleAnalytics gaId="G-3K2LVX6MD1" />
         <Providers>{children}</Providers>
       </body>
