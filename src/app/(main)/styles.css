@@ -5,6 +5,6 @@
     linear-gradient(to bottom, #fff 1px, transparent 1px);
   background-position: center;
   mask: radial-gradient(circle, rgba(0, 0, 0, .8) 0px, rgba(0, 0, 0, .1) 200px) no-repeat;
-  mask-size: 200vw 200vh;
-  mask-position: -50vw -50vh;
+  mask-size: 500vw 500vh;
+  mask-position: -200vw -200vh;
 }

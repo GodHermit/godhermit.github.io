@@ -50,7 +50,7 @@ export default function HomePage() {
         </div>
       </CardHeader>
       <Divider />
-      <CardBody className="grid grid-cols-[auto,1fr] gap-y-4 gap-x-4 sm:gap-x-6 text-default-300">
+      <CardBody className="grid grid-cols-[auto,1fr] gap-y-4 gap-x-4 sm:gap-x-6 text-default-300 overflow-hidden">
         <b className="flex items-center gap-2 sm:gap-3">
           <CalendarIcon className={iconClassnames} /> Age:
         </b>{' '}
