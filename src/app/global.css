@@ -6,3 +6,8 @@ html {
   background-color: var(--nextui-background) !important;
   color: var(--nextui-foreground) !important;
 }
+
+.bg-noise {
+  background-size: 109px;
+  background-image: url(../assets/images/noise.png);
+}

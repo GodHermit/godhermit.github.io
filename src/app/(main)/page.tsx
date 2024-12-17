@@ -23,7 +23,7 @@ import { useMemo } from 'react';
 const BIRTHDAY = new Date('06 Nov 2003');
 
 const iconClassnames =
-  'text-default-300 w-4 h-4 sm:w-[1.375rem] sm:h-[1.375rem]';
+  'text-default-400 w-4 h-4 sm:w-[1.375rem] sm:h-[1.375rem] dark:text-default-300';
 
 export default function HomePage() {
   const years = useMemo(() => {
@@ -38,19 +38,19 @@ export default function HomePage() {
   }, []);
 
   return (
-    <Card className="relative z-10 w-full mx-4 max-w-max">
+    <Card className="relative z-10 w-full mx-4 max-w-max shadow-2xl">
       <CardHeader className="flex items-center gap-3 px-3 pt-4">
         <div className="flex flex-col gap-2">
           <h1 className="text-xl sm:text-2xl font-bold">
             Hi! I'm Oleh Proidakov 🌹
           </h1>
-          <p className="flex items-center gap-1 text-default-300 text-sm sm:text-base">
+          <p className="flex items-center gap-1 text-default-400 text-sm sm:text-base dark:text-default-300">
             Frontend Developer
           </p>
         </div>
       </CardHeader>
       <Divider />
-      <CardBody className="grid grid-cols-[auto,1fr] gap-y-4 gap-x-4 sm:gap-x-6 text-default-300 overflow-hidden">
+      <CardBody className="grid grid-cols-[auto,1fr] gap-y-4 gap-x-4 sm:gap-x-6 text-default-400 overflow-hidden dark:text-default-300">
         <b className="flex items-center gap-2 sm:gap-3">
           <CalendarIcon className={iconClassnames} /> Age:
         </b>{' '}

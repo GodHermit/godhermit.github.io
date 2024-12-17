@@ -51,7 +51,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body className={clsx('dark text-foreground bg-background', inter.className)}>
+      <body
+        className={clsx(
+          'dark text-foreground bg-[rgb(6,6,7)]',
+          inter.className
+        )}
+      >
         <GoogleAnalytics gaId="G-3K2LVX6MD1" />
         <Providers>{children}</Providers>
       </body>

@@ -1,8 +1,8 @@
 .bg-grid {
   background-size: 80px 80px;
   background-image:
-    linear-gradient(to right, #fff 1px, transparent 1px),
-    linear-gradient(to bottom, #fff 1px, transparent 1px);
+    linear-gradient(to right, hsl(var(--nextui-foreground)) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(var(--nextui-foreground)) 1px, transparent 1px);
   background-position: center;
   mask: radial-gradient(circle, rgba(0, 0, 0, .8) 0px, rgba(0, 0, 0, .1) 200px) no-repeat;
   mask-size: 500vw 500vh;

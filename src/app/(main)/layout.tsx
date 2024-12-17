@@ -54,6 +54,14 @@ export default function MainLayout({
           duration: 0.3,
         }}
       />
+      <div
+        className="fixed inset-0 z-[999] backdrop-blur pointer-events-none"
+        style={{
+          maskSize: `500vw 500vh`,
+          mask: `radial-gradient(circle, rgba(0, 0, 0, 0) 500px, rgba(0, 0, 0, 1) 700px) no-repeat`,
+        }}
+      />
+      <div className="fixed inset-0 z-[999] opacity-[0.06] pointer-events-none bg-noise" />
       {children}
     </main>
   );
