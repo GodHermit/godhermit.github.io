@@ -15,10 +15,10 @@ import {
   GithubIcon,
   LinkedinIcon,
   MailIcon,
-  SendHorizonalIcon,
   SendIcon,
 } from 'lucide-react';
 import { useMemo } from 'react';
+import { Typewriter } from 'react-simple-typewriter';
 
 const BIRTHDAY = new Date('06 Nov 2003');
 
@@ -44,8 +44,25 @@ export default function HomePage() {
           <h1 className="text-xl sm:text-2xl font-bold">
             Hi! I'm Oleh Proidakov 🌹
           </h1>
-          <p className="flex items-center gap-1 text-default-400 text-sm sm:text-base dark:text-default-300">
-            Frontend Developer
+          <p className="leading-6 min-h-6 text-default-400 text-sm sm:text-base dark:text-default-300">
+            <span>
+              <Typewriter
+                words={[
+                  'Frontend Developer',
+                  'Passionate Problem Solver',
+                  'Digital Innovator',
+                  'Tech Enthusiast',
+                  'Web3 Explorer',
+                  'Creative Developer',
+                  'Software Engineer',
+                  'React Specialist',
+                  'CSS Wizard',
+                  'Agile Team Player',
+                ]}
+                loop
+                delaySpeed={5000}
+              />
+            </span>
           </p>
         </div>
       </CardHeader>

@@ -1,9 +1,9 @@
 'use client';
 import useMousePosition from '@/hooks/useMousePosition';
-import { useIsClient, useWindowSize } from 'usehooks-ts';
-import { motion, transform, useAnimate } from 'framer-motion';
-import './styles.css';
+import { motion, useAnimate } from 'framer-motion';
 import { useEffect } from 'react';
+import { useIsClient, useWindowSize } from 'usehooks-ts';
+import './styles.css';
 
 export default function MainLayout({
   children,
