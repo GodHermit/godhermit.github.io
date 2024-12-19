@@ -30,7 +30,7 @@ export const metadata = {
   openGraph: {
     title: 'Oleh Proidakov',
     description: 'Hi! My name is Oleh.',
-    url: 'https://godhermit.github.io/',
+    url: 'https://olehproidakov.pp.ua/',
     siteName: 'Oleh Proidakov',
     locale: 'en_US',
     type: 'website',
