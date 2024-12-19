@@ -43,7 +43,7 @@ export default function MainLayout({
     <main className="flex justify-center items-center min-h-screen">
       <motion.div
         ref={scope}
-        className="absolute inset-0 bg-grid"
+        className="fixed inset-0 bg-grid"
         animate={{
           maskPosition:
             isClient && isPositionInitialized && width > 768

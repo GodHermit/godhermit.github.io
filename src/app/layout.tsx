@@ -3,11 +3,11 @@ import './global.css';
 import { Providers } from './providers';
 import { Inter } from 'next/font/google';
 import { clsx } from '@nextui-org/shared-utils';
+import { Viewport } from 'next';
 
 export const metadata = {
   title: 'Oleh Proidakov',
   description: 'Hi! My name is Oleh.',
-  themeColor: '#000000',
   icons: {
     icon: [
       {
@@ -35,6 +35,10 @@ export const metadata = {
     locale: 'en_US',
     type: 'website',
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: '#000000',
 };
 
 const inter = Inter({
