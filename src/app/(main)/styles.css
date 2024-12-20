@@ -1,10 +1,16 @@
 .bg-grid {
-  background-size: 80px 80px;
-  background-image:
+  background-size: 60px 60px;
+  /* background-image:
     linear-gradient(to right, hsl(var(--nextui-foreground)) 1px, transparent 1px),
-    linear-gradient(to bottom, hsl(var(--nextui-foreground)) 1px, transparent 1px);
+    linear-gradient(to bottom, hsl(var(--nextui-foreground)) 1px, transparent 1px); */
+  background-image: radial-gradient(white 2px, transparent 0);
   background-position: center;
-  mask: radial-gradient(circle, rgba(0, 0, 0, .8) 0px, rgba(0, 0, 0, .1) 200px) no-repeat;
+  mask: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0.8) 0px,
+      rgba(0, 0, 0, 0.1) 200px
+    )
+    no-repeat;
   mask-size: 500vw 500vh;
   mask-position: -200vw -200vh;
 }
