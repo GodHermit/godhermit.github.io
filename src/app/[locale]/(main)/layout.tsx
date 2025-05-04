@@ -4,6 +4,7 @@ import { motion, useAnimate } from 'framer-motion';
 import { useEffect } from 'react';
 import { useIsClient, useWindowSize } from 'usehooks-ts';
 import './styles.css';
+import { LanguageSelect } from '@/components/LanguageSelect';
 
 export default function MainLayout({
   children,
@@ -23,7 +24,7 @@ export default function MainLayout({
       return;
     }
 
-    animate(
+    const animation = animate(
       scope.current,
       {
         mask: [
@@ -37,6 +38,10 @@ export default function MainLayout({
         repeat: Infinity,
       }
     );
+
+    return () => {
+      animation.stop(); // Clean up the animation
+    };
   }, [width]);
 
   return (
@@ -62,6 +67,7 @@ export default function MainLayout({
         }}
       />
       <div className="fixed inset-0 z-[999] opacity-[0.06] pointer-events-none bg-noise" />
+      <LanguageSelect />
       {children}
     </main>
   );

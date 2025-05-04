@@ -1,14 +1,14 @@
 'use client';
 
+import { Button } from '@heroui/button';
 import {
-  Button,
   Card,
   CardBody,
   CardFooter,
   CardHeader,
   Divider,
   Link,
-} from '@nextui-org/react';
+} from '@heroui/react';
 import {
   CakeIcon,
   CalendarIcon,
@@ -17,6 +17,7 @@ import {
   MailIcon,
   SendIcon,
 } from 'lucide-react';
+import { useMessages, useTranslations } from 'next-intl';
 import { useMemo } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 
@@ -26,6 +27,9 @@ const iconClassnames =
   'text-default-400 w-4 h-4 sm:w-[1.375rem] sm:h-[1.375rem] dark:text-default-300';
 
 export default function HomePage() {
+  const t = useTranslations('bio');
+  const messages = useMessages();
+
   const years = useMemo(() => {
     return new Date(Date.now() - BIRTHDAY.getTime()).getUTCFullYear() - 1970;
   }, []);
@@ -41,24 +45,13 @@ export default function HomePage() {
     <Card className="relative z-10 w-full mx-4 max-w-max shadow-2xl">
       <CardHeader className="flex items-center gap-3 px-3 pt-4">
         <div className="flex flex-col gap-2">
-          <h1 className="text-xl sm:text-2xl font-bold">
-            Hi! I'm Oleh Proidakov 🌹
-          </h1>
+          <h1 className="text-xl sm:text-2xl font-bold">{t('greeting')}</h1>
           <p className="leading-6 min-h-6 text-default-400 text-sm sm:text-base dark:text-default-300">
             <span>
               <Typewriter
-                words={[
-                  'Frontend Developer',
-                  'Passionate Problem Solver',
-                  'Digital Innovator',
-                  'Tech Enthusiast',
-                  'Web3 Explorer',
-                  'Creative Developer',
-                  'Software Engineer',
-                  'React Specialist',
-                  'CSS Wizard',
-                  'Agile Team Player',
-                ]}
+                words={Object.keys(messages.bio.descriptions).map(key =>
+                  t(`descriptions.${key}`)
+                )}
                 loop
                 delaySpeed={5000}
               />
@@ -69,7 +62,7 @@ export default function HomePage() {
       <Divider />
       <CardBody className="grid grid-cols-[auto,1fr] gap-y-4 gap-x-4 sm:gap-x-6 text-default-400 overflow-hidden dark:text-default-300">
         <b className="flex items-center gap-2 sm:gap-3">
-          <CalendarIcon className={iconClassnames} /> Age:
+          <CalendarIcon className={iconClassnames} /> {t('ageLabel')}:
         </b>{' '}
         <p className="flex items-baseline gap-2 text-foreground col-span-2 -mt-3 sm:mt-0 pl-6 sm:pl-0 sm:col-span-1">
           {years}
@@ -79,7 +72,7 @@ export default function HomePage() {
         </p>
         <Divider className="col-span-2 w-auto -mx-3" />
         <b className="flex items-center gap-2 sm:gap-3">
-          <MailIcon className={iconClassnames} /> Email:
+          <MailIcon className={iconClassnames} /> {t('emailLabel')}:
         </b>{' '}
         <Link
           href="mailto:oleh.proidakov@gmail.com"
@@ -92,7 +85,7 @@ export default function HomePage() {
         </Link>
         <Divider className="col-span-2 w-auto -mx-3" />
         <b className="flex items-center gap-2 sm:gap-3">
-          <GithubIcon className={iconClassnames} /> GitHub:
+          <GithubIcon className={iconClassnames} /> {t('githubLabel')}:
         </b>{' '}
         <Link
           href="https://github.com/GodHermit"
@@ -104,7 +97,7 @@ export default function HomePage() {
           @GodHermit
         </Link>
         <b className="flex items-center gap-2 sm:gap-3">
-          <LinkedinIcon className={iconClassnames} /> LinkedIn:
+          <LinkedinIcon className={iconClassnames} /> {t('linkedinLabel')}:
         </b>{' '}
         <Link
           href="https://www.linkedin.com/in/oleh-proidakov/"
@@ -116,7 +109,7 @@ export default function HomePage() {
           in/oleh-proidakov
         </Link>
         <b className="flex items-center gap-2 sm:gap-3">
-          <SendIcon className={iconClassnames} /> Telegram:
+          <SendIcon className={iconClassnames} /> {t('telegramLabel')}:
         </b>{' '}
         <Link
           href="https://t.me/GodHermit"
@@ -138,7 +131,7 @@ export default function HomePage() {
           target="_blank"
           startContent={<MailIcon width={18} height={18} />}
         >
-          Contact now!
+          {t('contactButton')}
         </Button>
       </CardFooter>
     </Card>

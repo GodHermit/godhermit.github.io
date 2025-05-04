@@ -1,0 +1,29 @@
+{
+  "bio": {
+    "greeting": "Ciao! Sono Oleh Proidakov 🌹",
+    "descriptions": [
+      "Sviluppatore Frontend",
+      "Risolutore di Problemi Appassionato",
+      "Innovatore Digitale",
+      "Appassionato di Tecnologia",
+      "Esploratore Web3",
+      "Sviluppatore Creativo",
+      "Ingegnere del Software",
+      "Specialista React",
+      "Mago del CSS",
+      "Collaboratore Agile"
+    ],
+    "ageLabel": "Età",
+    "emailLabel": "Email",
+    "githubLabel": "GitHub",
+    "linkedinLabel": "LinkedIn",
+    "telegramLabel": "Telegram",
+    "contactButton": "Contattami ora!",
+    "languages": {
+      "en": "Inglese",
+      "uk": "Ucraino",
+      "it": "Italiano",
+      "ro": "Rumeno"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "bio": {
+    "greeting": "Salut! Sunt Oleh Proidakov 🌹",
+    "descriptions": [
+      "Dezvoltator Frontend",
+      "Rezolvator de Probleme",
+      "Inovator Digital",
+      "Entuziast Tehnologic",
+      "Explorator Web3",
+      "Dezvoltator Creativ",
+      "Inginer Software",
+      "Specialist React",
+      "Vrăjitor CSS",
+      "Jucător de Echipa"
+    ],
+    "ageLabel": "Vârsta",
+    "emailLabel": "Email",
+    "githubLabel": "GitHub",
+    "linkedinLabel": "LinkedIn",
+    "telegramLabel": "Telegram",
+    "contactButton": "Contactează-mă acum!",
+    "languages": {
+      "en": "Engleză",
+      "uk": "Ucraineană",
+      "it": "Italiană",
+      "ro": "Română"
+    }
+  }
+}
